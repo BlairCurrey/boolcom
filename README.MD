@@ -2,7 +2,7 @@ This utility can aid in testing complicated boolean logic.
 
 `Boolcom` takes an `input` representing the possible values for variables (either true, false, undefined, or null) like:
 
-```js
+```ts
 const boolcom = new Boolcom({
   var1: [true, false, undefined],
   var2: [true, false],
@@ -11,7 +11,7 @@ const boolcom = new Boolcom({
 
 This builds an array of resuls stored in `boolcom.combos` like so:
 
-```js
+```ts
 [
   { var1: true, var2: true },
   { var1: true, var2: false },
@@ -22,9 +22,9 @@ This builds an array of resuls stored in `boolcom.combos` like so:
 ]
 ```
 
-Functions can be applied to a Boolcom object like so:
+Functions can be applied to the results like so:
 
-```js
+```ts
   interface eitherOrArgs {
     trueOrFalse: boolean
     trueOrFalseOrNull: boolNullUndefined
