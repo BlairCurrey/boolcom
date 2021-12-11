@@ -1,17 +1,17 @@
 {
-  "name": "pperm",
+  "name": "boolcom",
   "version": "1.0.0",
   "description": "cli utility to generate permutations and combinations",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "bin": {
-    "pperm": "dist/cli.js"
+    "boolcom": "lib/cli.js"
   },
   "scripts": {
     "test": "ava",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "start": "node dist/index.js"
+    "start": "node lib/index.js"
   },
   "author": "Blair Currey",
   "license": "ISC",
