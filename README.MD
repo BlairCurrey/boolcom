@@ -1,6 +1,6 @@
 This utility can aid in testing complicated boolean logic.
 
-`getCombos` takes an `input` representing the possible values for variables (either true, false, undefined, or null) like:
+`Boolcom` takes an `input` representing the possible values for variables (either true, false, undefined, or null) like:
 
 ```js
 const boolcom = new Boolcom({
