@@ -40,7 +40,7 @@ export class Boolcom {
   };
 
   static cartesianProduct = (arr2D: VariableTypes[][]): any[][] => {
-    const product: any = [];
+    const product: any[] = [];
     const max = arr2D.length - 1;
     const helper = (arr: any, i: number) => {
       // TODO: potential to simplify by using optional arguments?
