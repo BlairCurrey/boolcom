@@ -5,7 +5,7 @@ export type VariableTypes = boolean | null | undefined;
 
 export class Boolcom {
   combos: any[];
-  input: VariableTypesMap
+  input: VariableTypesMap;
 
   constructor(private _input: VariableTypesMap) {
     this.input = _input;
@@ -13,20 +13,20 @@ export class Boolcom {
   }
 
   apply = (fn: Function) => {
-    this.combos.forEach((combo: any) => fn(combo))
-  }
+    this.combos.forEach((combo: any) => fn(combo));
+  };
 
   static getCombos = (input: VariableTypesMap) => {
     const { keys, values } = Boolcom.getKeysValues(input);
     return Boolcom.mapProductToVars(keys, values);
   };
-  
+
   static getKeysValues = (input: VariableTypesMap) => {
     return {
       keys: Object.keys(input),
       values: Object.values(input),
     };
-  }
+  };
 
   static mapProductToVars = (keys: string[], values: VariableTypes[][]) => {
     // TODO: add VariableTypesMap[] return type
@@ -37,7 +37,7 @@ export class Boolcom {
       });
       return obj;
     });
-  }
+  };
 
   static cartesianProduct = (arr2D: VariableTypes[][]): any[][] => {
     const product: any = [];
