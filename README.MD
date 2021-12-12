@@ -1,6 +1,8 @@
-This utility can aid in testing complicated boolean logic.
+Boolcom is a utility to help deal with **bool**ean **com**binations.
 
-`Boolcom` takes an `input` representing the possible values for variables (either true, false, undefined, or null) like:
+`Boolcom` takes an `input` mapping the possible values for variables (either true, false, undefined, or null) and returns all possible combinations. A function (such as one boolean expression) can be applied to each combination using the `boolcom.apply` method.
+
+Create a new `Boolcom` object like:
 
 ```ts
 const boolcom = new Boolcom({
@@ -9,7 +11,7 @@ const boolcom = new Boolcom({
 });
 ```
 
-This builds an array of resuls stored in `boolcom.combos` like so:
+This builds an array of results which can be accessed via `boolcom.combos` which returns something like:
 
 ```ts
 [
@@ -22,7 +24,7 @@ This builds an array of resuls stored in `boolcom.combos` like so:
 ]
 ```
 
-Functions can be applied to the results like so:
+Another example show how functions can be applied against the results like so:
 
 ```ts
   interface eitherOrArgs {
